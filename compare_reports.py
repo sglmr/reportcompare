@@ -24,7 +24,7 @@ class ReportCompare:
         elif ".xls" in self.f1_name:
             self.df1 = pandas.read_excel(file1, index_col=self.key)
             self.df2 = pandas.read_excel(file2, index_col=self.key)
-        else:
+        else:  # pragma: no cover
             raise ValueError
 
     def compare_files(self):
@@ -55,8 +55,8 @@ class ReportCompare:
         )
         return self.compare
 
-    def write_to_excel(self):
-        with pandas.ExcelWriter(self.results_file, mode="w") as writer:
+    def write_to_excel(self, results_file):
+        with pandas.ExcelWriter(results_file, mode="w") as writer:
             if len(self.summary) > 0:
                 self.summary.to_excel(
                     writer,
@@ -168,11 +168,6 @@ class ReportCompare:
     def _label_list(self, label: str, items: list) -> list[list]:
         """Labels a list of items to be turned into a dataframe"""
         return [[label, x] for x in items]
-
-    def find_shared_columns(self) -> pandas.Index:
-        """Create an Index (list) of the shared columns in the files"""
-
-        return self.og_df1.columns.intersection(self.og_df2.columns)
 
     def drop_extra_columns(self):
         """Deletes extra columns that aren't in both files.

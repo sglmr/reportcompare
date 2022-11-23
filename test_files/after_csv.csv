@@ -1,0 +1,7 @@
+eid,first_name,start_year,gender,manager,department,extra_col_2
+111,John,2022,m,Jeff,133,1
+112,Jane,1999,f,Rita,355,4
+113,Rita,2021,f,Jeff,345,j
+114,Lynn,2020,F,Jane,123,99
+114,Lynn,2021,F,Lyda,123,99
+117,Steve,2018,M,Rita,456,8
