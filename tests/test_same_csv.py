@@ -1,7 +1,9 @@
-import pytest
 from pathlib import Path
-from compare_reports import ReportCompare
+
 import pandas as pd
+import pytest
+
+from compare_reports import ReportCompare
 
 
 @pytest.fixture

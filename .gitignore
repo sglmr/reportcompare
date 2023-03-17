@@ -1,5 +1,6 @@
 .DS_Store
 working_dir/
+.vscode
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

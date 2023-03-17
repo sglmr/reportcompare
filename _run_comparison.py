@@ -1,5 +1,6 @@
-from compare_reports import ReportCompare
 from pathlib import Path
+
+from compare_reports import ReportCompare
 
 
 def main():

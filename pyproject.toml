@@ -1,0 +1,22 @@
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+python_files = ["test_*.py"]
+addopts = "-n auto --cov --cov-report=term --cov-report=html"
+
+[tool.coverage.run]
+source = ["."]
+
+
+[tool.coverage.report]
+fail_under = 95
+show_missing = true
+skip_covered = true
+sort = "Miss"
+precision = 1
+omit = [
+    ]
+
+[tool.ruff]
+unfixable = ["F401"]
