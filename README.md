@@ -1,2 +1,1 @@
-# reportcompare
-Compare and report differences between two similar CSV or Excel files.
+# Report Compare: Compare two Similar Reports!
